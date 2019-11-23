@@ -1,0 +1,69 @@
+var p1btn = document.getElementById("p1Btn");
+var p2btn = document.getElementById("p2Btn");
+var resetBtn = document.getElementById("resetBtn");
+var player1 = document.getElementById("player1");
+var player2 = document.getElementById("player2");
+var maxVal = document.getElementById("maxVal");
+var maxScore = document.querySelector("input");
+
+gameOver = false;
+
+var oneScore = 0;
+var twoScore = 0;
+
+winnerScore = 5;
+
+
+p1btn.addEventListener("click",function(){
+    if(gameOver === false){
+        oneScore++;
+        player1.textContent = oneScore;
+        
+        if(winnerScore === oneScore){
+            gameOver = true;
+            player1.classList.add("winner");
+
+        } 
+    }
+       
+    
+
+
+});
+
+p2btn.addEventListener("click",function(){
+    if(gameOver === false){
+        twoScore++;
+        player2.textContent = twoScore;
+        console.log(winnerScore)
+        if(winnerScore === twoScore){
+           gameOver = true; 
+           player2.classList.add("winner");
+        } 
+    }
+    
+
+});
+
+resetBtn.addEventListener("click",function(){
+    oneScore = 0;
+    twoScore = 0;
+    player1.textContent = oneScore;
+    player2.textContent = twoScore;
+    player1.classList.remove("winner");
+    player2.classList.remove("winner");
+    gameOver = false;
+
+})
+
+
+maxScore.addEventListener("change",function(){
+    if(isNaN(maxScore.value)||maxScore.value<0) alert("IS'NT a Number!!");
+    else{
+        winnerScore = Number(maxScore.value);
+        maxVal.textContent = winnerScore;
+    }
+    
+})
+
+

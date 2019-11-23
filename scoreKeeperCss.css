@@ -1,0 +1,20 @@
+h1,h5,input{
+    display: inline;
+    font-size: 100px;
+}
+
+
+.winner{
+    color: chartreuse;
+}
+
+.reset{
+
+    color: black;
+}
+
+.form-control{
+    width: 100px;
+    margin-left: 509px;
+
+}
