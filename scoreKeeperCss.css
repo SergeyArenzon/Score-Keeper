@@ -1,6 +1,7 @@
 h1,h5,input{
     display: inline;
     font-size: 100px;
+    color: rgb(170, 170, 170);
 }
 
 
@@ -8,12 +9,52 @@ h1,h5,input{
     color: chartreuse;
 }
 
-.reset{
-
-    color: black;
-}
 
 .form-control{
+
+    width: 10%;
+    margin: auto;
+    margin-bottom: 13px;
+    margin-top: 10px;
+}
+#resetBtn{
+
+    margin-top: 10px;
+}
+.container{
+    margin-bottom:20px;
+    width: 40%;
+    height: 70%;
+    margin-top:10% ;
+    border: 3px solid gray;
+    border-radius: 18px; 
+    background-repeat: no-repeat;
+    background-image: url("https://cdn.pixabay.com/photo/2013/01/04/07/15/board-73496_960_720.jpg")
+}
+
+.player1won{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    color: blue;
+    border: 3px solid red;
+    border-radius: 18px; 
+    font-weight: bold;
+
+}
+
+.player2won{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    color:green;
+    border: 3px solid red;
+    border-radius: 18px; 
+    font-weight: bold;
+
+
+}
+
+.boldText{
+    font-weight: 1000;
     
 
 }

@@ -5,6 +5,7 @@ var player1 = document.getElementById("player1");
 var player2 = document.getElementById("player2");
 var maxVal = document.getElementById("maxVal");
 var maxScore = document.querySelector("input");
+var output = document.querySelector("output");
 
 gameOver = false;
 
@@ -22,7 +23,9 @@ p1btn.addEventListener("click",function(){
         if(winnerScore === oneScore){
             gameOver = true;
             player1.classList.add("winner");
-
+            player1.classList.add("boldText");
+            output.classList.add("player1won");
+            output.textContent = "Player One Won!"
         } 
     }
        
@@ -39,6 +42,11 @@ p2btn.addEventListener("click",function(){
         if(winnerScore === twoScore){
            gameOver = true; 
            player2.classList.add("winner");
+           player2.classList.add("boldText");
+           output.classList.add("player2won");
+           output.textContent = "Player Two Won!"
+
+          
         } 
     }
     
@@ -52,6 +60,11 @@ resetBtn.addEventListener("click",function(){
     player2.textContent = twoScore;
     player1.classList.remove("winner");
     player2.classList.remove("winner");
+    output.classList.remove("player1won");
+    output.classList.remove("player2won");
+    output.textContent = "";
+    player1.classList.remove("boldText");
+    player2.classList.remove("boldText");
     gameOver = false;
 
 })
